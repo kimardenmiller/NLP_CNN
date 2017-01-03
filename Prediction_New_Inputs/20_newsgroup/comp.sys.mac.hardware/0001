@@ -1,0 +1,30 @@
+
+Using Apple Hardware Test
+Apple Hardware Test (AHT) contains a suite of diagnostics that will test the hardware of your computer. It's a great way to rule out a hardware issue when troubleshooting your computer.
+
+Before you begin
+Important: If your Mac was released after June 2013, you will use Apple Diagnostics rather than Apple Hardware Test (AHT). See Using Apple Diagnostics for instructions.
+Consider doing some preliminary troubleshooting to determine if your issue is related to hardware. You can try to determine if the cause of your issue is related to hardware or software by following Isolating issues in OS X. AHT can help determine which hardware component may be causing the issue.
+Before starting AHT, be sure to disconnect all external devices except the keyboard, mouse, display, and Ethernet adapter. Also disconnect any external optical drives.
+If you are testing a Mac notebook, perform the following additional steps:
+You need to connect to AC Power when running the Apple Hardware Test on a Mac notebook.
+Set up your computer on a hard, flat, stable work surface that allows for adequate air circulation under and around the computer (such as a desk, table, or counter).
+Using Apple Hardware Test
+Shut down your computer. Then, press the power button to turn it back on.
+Press and hold the D key before the gray startup screen appears.
+It takes a minute or so for AHT to start up and inspect your hardware configuration. While this is taking place, an icon appears on the screen:
+
+When the process is complete, select your language and click the right arrow. If you aren't using a mouse, you can use the up and down arrows to select a language and then press the Return key.
+The AHT console appears. You can choose which sort of test or tests to perform:
+To perform all of the basic tests, click the Test button or press the "T" key or the Return key.
+To perform a more thorough diagnostic test, select the "Perform extended testing" checkbox under the Test button before you click the Test button.
+Note: Your test results will appear in the window in the bottom-right of the console.
+To exit AHT, click Restart or Shut Down at the bottom of the window.
+Some Macintosh computers that shipped with OS X Lion and later support the use of Apple Hardware Test over the Internet. These computers will start up to an Internet-based version of AHT if the hard drive does not contain AHT.  An Internet-enabled connection via Ethernet or Wi-Fi is required to use this feature. Internet-based AHT functions the same as AHT on the hard drive or flash storage outlined above.
+Using Apple Hardware Test on computers with OS X v10.7 and earlier
+AHT is located on the Applications Install Disc 2 and should be included with your computer or the MacBook Air Software Reinstall Drive on a MacBook Air (Late 2010). To start AHT on these computers make sure the Applications Install Disc 2 is inserted into the built-in optical drive, external Apple Superdrive, or for the MacBook Air (Late 2010) be sure the MacBook Air Software Reinstall Drive is inserted into a USB port. Then, follow steps 1-6 outlined in the previous section of this article.
+What to do if you get an error in AHT
+ 
+Confirm that the power adapter is connected if you're using a Mac notebook.
+Confirm that all external devices are disconnected from your computer.
+Record any error code given so that you can give the information to a Mac Genius, Apple Authorized Service Provider, or Apple Technical Support Specialist.
