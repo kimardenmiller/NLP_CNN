@@ -65,9 +65,11 @@ tokenizer = Tokenizer(nb_words=MAX_NB_WORDS)
 tokenizer.fit_on_texts(texts)
 sequences = tokenizer.texts_to_sequences(texts)
 
-word_index = tokenizer.word_index
-print('Found %s unique tokens.' % len(word_index))
-print('word index', word_index.values())
+# word_index = tokenizer.word_index
+# word_index = np.load('../saved_models/0.0.4_word_index.npy')
+
+# print('Found %s unique tokens.' % len(word_index))
+# print('word index', word_index.values())
 
 data = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
 
@@ -160,4 +162,4 @@ print('Labels: \n', labels)
 scores = model.evaluate(x_test, y_test, verbose=0)
 print("Accuracy of Disk-Loaded Model: %.2f%%" % (scores[1]*100))
 
-# Accuracy of Disk-Loaded Model: 11.11%
+# Jan 3, 2017  Accuracy of Disk-Loaded Model: 11.11%
