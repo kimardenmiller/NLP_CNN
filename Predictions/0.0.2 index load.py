@@ -150,7 +150,7 @@ y_test = labels
 # del model  # deletes the existing model
 
 # returns a compiled model identical to the previous one
-model = load_model('../saved_models/0.0.3_model.h5')
+model = load_model('../saved_models/0.0.4_model.h5')
 # print(model.summary())
 
 # print('Predictions ...')

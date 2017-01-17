@@ -22,7 +22,6 @@ EMBEDDING_DIM = 100
 VALIDATION_SPLIT = 0.2
 
 # first, build index mapping words in the embeddings set to their embedding vector
-
 print('Indexing word vectors.')
 
 embeddings_index = {}
