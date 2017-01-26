@@ -9,11 +9,12 @@ from keras.layers import Conv1D, MaxPooling1D, Embedding
 from keras.models import Model
 import sys
 import pandas as pd
+import pickle
 from keras.models import load_model
 
 np.random.seed(1337)
 
-BASE_DIR = '/Users/kimardenmiller/Documents/Local Data/NLP_Embeddings/'
+BASE_DIR = '/Users/kimardenmiller/local_data/NLP_Embeddings/'
 GLOVE_DIR = BASE_DIR + 'glove.6B/'
 TEXT_DATA_DIR = BASE_DIR + '20_newsgroup/'
 MAX_SEQUENCE_LENGTH = 1000
@@ -62,14 +63,14 @@ print(texts[0])
 # finally, vectorize the text samples into a 2D integer tensor
 tokenizer = Tokenizer(nb_words=MAX_NB_WORDS)
 tokenizer.fit_on_texts(texts)
+pickle.dump(tokenizer, open('../saved_models/tokenizer.004.p', 'wb'))
 sequences = tokenizer.texts_to_sequences(texts)
 
 word_index = tokenizer.word_index
 print('Found %s unique tokens.' % len(word_index))
-print('word index', word_index.values())
+print('Word index', word_index.values())
 
 data = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
-
 labels = to_categorical(np.asarray(labels))
 print('Shape of data tensor:', data.shape)
 print('Sample data tensor:', data[0, 0:])

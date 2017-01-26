@@ -25,7 +25,7 @@ from keras.models import load_model
 
 np.random.seed(1337)
 
-BASE_DIR = '/Users/kimardenmiller/Documents/Local Data/NLP_Embeddings/'
+BASE_DIR = '/Users/kimardenmiller/local_data/NLP_Embeddings/'
 GLOVE_DIR = BASE_DIR + 'glove.6B/'
 TEXT_DATA_DIR = BASE_DIR + '20_newsgroup/'
 MAX_SEQUENCE_LENGTH = 1000
@@ -148,3 +148,4 @@ model.fit(x_train, y_train, validation_data=(x_val, y_val),
 
 #  Dec 30, 2016  loss: 0.3069 - acc: 0.8908 - val_loss: 0.1421 - val_acc: 0.9549
 
+# Jan 25, 2017  loss: 0.6809 - acc: 0.7623 - val_loss: 0.3254 - val_acc: 0.9185
