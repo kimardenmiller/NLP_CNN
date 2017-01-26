@@ -42,26 +42,8 @@ print(texts[0])
 tokenizer = pickle.load(open('../saved_models/tokenizer.004.p', 'rb'))
 sequences = tokenizer.texts_to_sequences(texts)
 
-data = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
-labels = to_categorical(np.asarray(labels))
-# print('Shape of data tensor:', data.shape)
-# print('Data tensor:', data)
-# print('Shape of label tensor:', labels.shape)
-
-# split the data into a training set and a validation set
-# indices = np.arange(data.shape[0])
-# np.random.shuffle(indices)
-# data = data[indices]
-# labels = labels[indices]
-# nb_validation_samples = int(VALIDATION_SPLIT * data.shape[0])
-#
-# # x_train = data[:-nb_validation_samples]
-# # y_train = labels[:-nb_validation_samples]
-# x_val = data[-nb_validation_samples:]
-# y_val = labels[-nb_validation_samples:]
-
-x_test = data
-y_test = labels
+x_test = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
+y_test = to_categorical(np.asarray(labels))
 
 # returns a compiled model identical to the previous one
 model = load_model('../saved_models/0.0.4_model.h5')
@@ -76,3 +58,4 @@ model = load_model('../saved_models/0.0.4_model.h5')
 scores = model.evaluate(x_test, y_test, verbose=0)
 print("Accuracy of Disk-Loaded Model: %.2f%%" % (scores[1]*100))
 
+#  Jan 26, 2017 Accuracy of Disk-Loaded Model: 90.74%
