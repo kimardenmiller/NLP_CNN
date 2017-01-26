@@ -60,8 +60,8 @@ labels = to_categorical(np.asarray(labels))
 # x_val = data[-nb_validation_samples:]
 # y_val = labels[-nb_validation_samples:]
 
-x_all = data
-y_all = labels
+x_test = data
+y_test = labels
 
 # returns a compiled model identical to the previous one
 model = load_model('../saved_models/0.0.4_model.h5')
@@ -73,9 +73,6 @@ model = load_model('../saved_models/0.0.4_model.h5')
 # print('Labels tensor: \n', labels)
 
 # Final evaluation of the model
-scores = model.evaluate(x_all, y_all, verbose=0)
+scores = model.evaluate(x_test, y_test, verbose=0)
 print("Accuracy of Disk-Loaded Model: %.2f%%" % (scores[1]*100))
 
-# Jan 19, 2017  Accuracy of Disk-Loaded Model: 70.72%
-
-# Jan 26, 2017  Accuracy of Disk-Loaded Model: 90.74%
