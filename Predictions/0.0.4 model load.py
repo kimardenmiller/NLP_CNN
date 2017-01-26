@@ -64,4 +64,4 @@ scores = model.evaluate(x_test, y_test, verbose=0)
 print("Accuracy of Disk-Loaded Model: %.2f%%" % (scores[1]*100))
 
 # Jan 17, 2017 Accuracy of Disk-Loaded Model: 11.11%
-#    (Need to find way to bring over a common index?)
+#    (Needed to find way to bring over a common index, which I did in 0.0.5)
